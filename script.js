@@ -1,6 +1,6 @@
 let runningTotal = 0;
 let buffer = "0";
-let peviousOperator;
+let previousOperator;
 
 const screen = document.querySelector('.screen');
 
@@ -15,7 +15,7 @@ function buttonClick(value){
 
 function handleSymbol(symbol){
     switch(symbol){
-        case 'c':
+        case 'C':
             buffer = '0';
             runningTotal = 0;
             break;
@@ -81,10 +81,9 @@ function handleNumber(numberString){
 }
 
 function init(){
-    document.querySelector('.cal-buttons').addEventListener('click', function(event){
+    document.querySelector('.calc-buttons').addEventListener('click', function(event){
         buttonClick(event.target.innerText);
-
-    })
+        })
 }
 
 init();
